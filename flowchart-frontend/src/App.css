@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4ff;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Prevents the overall page from scrolling */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 100%; /* Ensure the container takes full height */
+  }
+  
+  .left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  
+  .left {
+    background-color: #f9f9ff;
+    border-radius: 12px;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .right {
+    background-color: #f4f7fe;
+    border-radius: 12px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 100px); /* Make it scrollable within the viewport */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #4a3aff;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #4a3aff;
+    margin-bottom: 10px;
+  }
+  
+  input.searchArea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  button.generateButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #8b5cf6, #4c1d95);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.generateButton:hover {
+    background: linear-gradient(90deg, #7c3aed, #3a0d6f);
+  }
+  
+  .right p {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  .right p.error {
+    color: red;
+  }
+  
+  .flowchart img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  button.downloadButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4a3aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button.downloadButton:hover {
+    background-color: #3b36d1;
+  }
+  
+  /* Loading Spinner */
+  .loading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #4a3aff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading p {
+    font-size: 1.2rem;
+    color: #6b7280;
+  }
+  
