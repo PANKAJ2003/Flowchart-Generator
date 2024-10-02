@@ -33,7 +33,7 @@ def mm(graph, save_as_png=False, file_name="output.png"):
     response = requests.get(img_url)
 
     if response.status_code != 200:
-        raise ValueError("Invalid MermaidJS code")
+        raise ValueError("Sorry, unable to generate flowchart")
 
     if save_as_png:
         with open(file_name, "wb") as f:
