@@ -15,8 +15,6 @@ function App() {
     
     try {
       const apiUrl = process.env.REACT_APP_API_URL;
-      console.log("API URL:", apiUrl);
-
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
