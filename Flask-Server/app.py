@@ -76,6 +76,7 @@ def create_conversation_chain(memory, verbose=True):
 
 conversation = create_conversation_chain(memory_list[0])
 
+
 @app.route('/generate', methods=['POST'])
 def generate_flowchart():
     """Generates a flowchart based on user input."""
@@ -83,6 +84,9 @@ def generate_flowchart():
     try:
         data = request.json
         input_text = data.get('query')
+
+        if input_text is None or input_text.strip() == "":
+            return jsonify({"message": "Input query cannot be empty."}), 400
 
         if input_text == "reset":
             # Clear previous memories and create a new conversation chain
